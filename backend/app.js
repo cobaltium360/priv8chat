@@ -15,7 +15,7 @@ app.use(cors());
 const io = new Server(server, {
     path : "/ws",
     cors: {
-        origin: "*",
+        origin: "https://priv8chat.cc",
         methods: ["GET", "POST"]
     }
 })
