@@ -17,7 +17,7 @@ const io = new Server(server, {
 })
 
 io.origins((origin, callback) => {
-    if (origin !== 'https://priv8chat.cc' || origin !== 'https://www/priv8chat.cc') {
+    if (origin !== 'https://priv8chat.cc' || origin !== 'https://www.priv8chat.cc') {
         return callback('origin not allowed', false);
     }
     callback(null, true);
