@@ -13,6 +13,7 @@ const deconnect = user.deconnect;
 app.use(cors());
 
 const io = new Server(server, {
+    path : "/ws",
     cors: {
         origin: "*",
         methods: ["GET", "POST"]

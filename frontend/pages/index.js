@@ -2,7 +2,9 @@ import Head from 'next/head'
 import React, { useState, useEffect, useRef } from 'react';
 import io from "socket.io-client";
 import { useRouter } from 'next/router'
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("http://localhost:3001", {
+  path: "/ws"
+});
 
 export default function Home() {
   const bottomOfChat = useRef();
