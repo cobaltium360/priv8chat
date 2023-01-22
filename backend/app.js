@@ -13,12 +13,15 @@ const deconnect = user.deconnect;
 app.use(cors());
 
 const io = new Server(server, {
-    path : "/wsmec",
-    cors: {
-        origin: "https://priv8chat.cc",
-        methods: ["GET", "POST"]
-    }
+    path : "/wsmec"
 })
+
+io.origins((origin, callback) => {
+    if (origin !== 'https://priv8chat.cc' || origin !== 'https://www/priv8chat.cc') {
+        return callback('origin not allowed', false);
+    }
+    callback(null, true);
+});
 
 io.on("connection" , (socket) => {
     connect(io)
