@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from "socket.io-client";
 import { useRouter } from 'next/router'
 const socket = io.connect("https://priv8chat.cc", {
-  path: "/ws"
+  path: "/wsmec"
 });
 
 export default function Home() {

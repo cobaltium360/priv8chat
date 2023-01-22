@@ -13,7 +13,7 @@ const deconnect = user.deconnect;
 app.use(cors());
 
 const io = new Server(server, {
-    path : "/ws",
+    path : "/wsmec",
     cors: {
         origin: "https://priv8chat.cc",
         methods: ["GET", "POST"]
