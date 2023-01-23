@@ -71,6 +71,7 @@ export default function Home() {
       behavior: "smooth",
       block: 'end',
     })
+    setMessage("")
   }
 
   function changepseu(e){
