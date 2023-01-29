@@ -1,8 +1,20 @@
 const express = require('express');
 const app = express();
 const http = require('http');
+
+
+// const fs = require('fs');
+//     let key = fs.readFileSync('/etc/letsencrypt/live/priv8chat.cc/privkey.pem');
+//     let cert = fs.readFileSync('/etc/letsencrypt/live/priv8chat.cc/fullchain.pem');
+//     var options = {
+//         key: key,
+//         cert: cert
+//     };
 const server = http.createServer(app);
+// const server = https.createServer(options, app);
 const { Server } = require("socket.io");
+
+
 const cors = require("cors");
 const user = require("./controllers/user")
 const adduser = user.Adduser;
